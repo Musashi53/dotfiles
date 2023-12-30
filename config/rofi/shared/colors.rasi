@@ -1,0 +1,10 @@
+/* Colors */
+
+* {
+  background:     #282828;
+  background-alt: #383838;
+  foreground:     #dfbf8e;
+  selected:       #e3a84e;
+  active:         #89b482;
+  urgent:         #ea6962;
+}
