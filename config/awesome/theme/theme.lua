@@ -121,6 +121,6 @@ theme.titlebar_ontop_button_focus_active_press =
 	gears.surface.load_from_shape(70, 30, gears.shape.rounded_bar, theme.blue)
 
 --- wallpaper ---
--- theme.wallpaper = "/usr/share/backgrounds/phoenix_dark_1080.png"
+theme.wallpaper = "/usr/share/backgrounds/Anime-Girl.png"
 
 return theme
