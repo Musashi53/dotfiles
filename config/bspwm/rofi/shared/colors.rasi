@@ -1,1 +1,16 @@
-/home/musashi/.config/bspwm/rofi/shared/colors.rasi
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #282828FF;
+    background-alt: #353535FF;
+    foreground:     #EBDBB2FF;
+    selected:       #689D6AFF;
+    active:         #D79921FF;
+    urgent:         #FB4934FF;
+}

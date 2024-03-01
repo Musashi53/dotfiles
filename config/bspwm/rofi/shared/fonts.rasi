@@ -1,1 +1,12 @@
-/home/musashi/.config/bspwm/rofi/shared/fonts.rasi
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Fonts
+ *
+ **/
+
+* {
+    font: "JetBrainsMono Nerd Font 10";
+}

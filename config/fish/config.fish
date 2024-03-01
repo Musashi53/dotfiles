@@ -3,8 +3,4 @@ if status is-interactive
 end
 
 source ~/.config/fish/fish_aliases
-
-set fish_greeting
-
 starship init fish | source
-source /opt/asdf-vm/asdf.fish

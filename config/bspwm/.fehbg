@@ -1,0 +1,4 @@
+#!/bin/bash
+
+## Set Default Wallpaper
+feh --no-fehbg --bg-fill "/usr/share/backgrounds/themes/Gruvbox/anime-green.jpg"
