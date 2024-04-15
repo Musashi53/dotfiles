@@ -1,0 +1,92 @@
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/clean
+
+# Basic Settings
+set reverse true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+
+# Custom Functions
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd setwallpaper ${{
+    setwallpaper "$f"
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+# Trash bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+# Bindings
+map o
+map d
+map e
+map f
+map c mkdirfile
+map . set hidden!
+map D delete
+map p paste
+map dd cut
+map y copy
+map ` mark-load
+map \\' mark-load
+map <enter> open
+map a rename
+map r reload
+map C clear
+map U unselect
+
+map do drag-out
+
+map g~ cd
+map gh cd
+map g/ /
+map gd cd
+
+# Movement
+map gD cd ~/Documents
+map gd cd ~/Downloads
+map gp cd ~/Pictures
+map gc cd ~/.config
+map gr cd ~/Repos
+map gv cd ~/Videos
+map gs cd ~/.local/bin
+map gt cd ~/.local/share/Trash/files

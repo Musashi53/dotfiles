@@ -1,0 +1,191 @@
+@keyframes blink-warning {
+  70% {
+    color: #ebdbb2;
+  }
+
+  to {
+    color: #ebdbb2;
+    background-color: #fabd2f;
+  }
+}
+
+@keyframes blink-critical {
+  70% {
+    color: #ebdbb2;
+  }
+
+  to {
+    color: #ebdbb2;
+    background-color: #fb4934;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+  background: #282828;
+  color: #ebdbb2;
+  font-family:
+    SF Pro Display,
+    JetBrainsMono Nerd Font,
+    sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 1rem;
+  border: 1px solid #ebdbb2;
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery.warning {
+  color: #fabd2f;
+}
+
+#battery.critical {
+  color: #fb4934;
+}
+
+#battery.warning.discharging {
+  animation-name: blink-warning;
+  animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+
+#clock {
+  /* No styles */
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+  color: #fabd2f;
+}
+
+#cpu.critical {
+  color: #fb4934;
+}
+
+#memory {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#memory.warning {
+  color: #fabd2f;
+}
+
+#memory.critical {
+  color: #fb4934;
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+
+#mode {
+  background: #64727d;
+  border-top: 2px solid white;
+  /* To compensate for the top border and still have vertical centering */
+  padding-bottom: 2px;
+}
+
+#network {
+  /* No styles */
+}
+
+#network.disconnected {
+  /* No styles */
+}
+
+#pulseaudio {
+  /* No styles */
+}
+
+#pulseaudio.muted {
+  /* No styles */
+}
+
+#custom-spotify {
+  color: rgb(102, 220, 105);
+}
+
+#temperature {
+  /* No styles */
+}
+
+#temperature.critical {
+  color: #fb4934;
+}
+
+#tray {
+  /* No styles */
+}
+
+#window {
+  /* No styles */
+}
+
+#workspaces {
+  background: @background;
+  border-radius: 8px;
+  padding: 0px 5px;
+  margin: 4px 10px;
+}
+
+#workspaces button {
+  padding: 0px 0px;
+  margin: 6px 5px;
+  border-radius: 15px;
+  background: #ebdbb2;
+  transition: all 0.5s cubic-bezier(0.11, 1.09, 0.6, 0.96);
+}
+
+#workspaces button.active {
+  margin: 6px 5px;
+  padding: 0px 16px;
+  background-color: #d3869b;
+}
+
+#workspaces button:hover {
+  background-color: #83a598;
+}
