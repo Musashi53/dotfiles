@@ -1,5 +1,0 @@
-require("configuration.setup")
-require("configuration.keys")
-require("configuration.rules")
-require("configuration.signals")
-require("configuration.autostart")
