@@ -1,6 +1,4 @@
-# Dotfiles
+# Yuri's Dotfiles
 
-Terminal: Alacritty <br>
-GTK Theme: Gruvbox Theme <br>
-Nerd Font: JetBrainsMono Nerd Font <br>
-File Manager: LF <br>
+<img src="./screenshots/desktop.png"/>
+<img src="./screenshots/rofi.png"/>
