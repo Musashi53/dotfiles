@@ -35,7 +35,7 @@
 
 /* The whole bar */
 #waybar {
-  background: #282828;
+  background: #1d2021;
   color: #ebdbb2;
   font-family:
     SF Pro Display,
@@ -44,7 +44,6 @@
   font-weight: bold;
   font-size: 13px;
   border-radius: 1rem;
-  border: 1px solid #ebdbb2;
 }
 
 /* Each module */
@@ -118,8 +117,6 @@
 
 #memory.critical {
   color: #fb4934;
-  animation-name: blink-critical;
-  animation-duration: 2s;
 }
 
 #mode {
@@ -183,9 +180,9 @@
 #workspaces button.active {
   margin: 6px 5px;
   padding: 0px 16px;
-  background-color: #d3869b;
+  background-color: #a9b665;
 }
 
 #workspaces button:hover {
-  background-color: #83a598;
+  background-color: #a9b665;
 }
