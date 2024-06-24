@@ -1,0 +1,59 @@
+# acct-user
+acct-user/flatpak ~amd64
+
+# acct-group
+acct-group/flatpak ~amd64
+
+# app-misc
+app-misc/lf
+app-misc/nwg-look ~amd64
+
+# dev-cpp
+dev-cpp/sdbus-c++ ~amd64
+
+# dev-libs
+dev-libs/editline
+dev-libs/libcpuid
+
+# dev-util
+dev-util/azuredatastudio
+dev-util/insomnia-bin
+dev-util/ostree ~amd64
+dev-util/typescript-language-server
+
+# games-emulation
+games-emulation/duckstation **
+
+# games-util
+games-util/game-device-udev-rules
+
+# gui-apps
+gui-apps/aylurs-gtk-shell
+gui-apps/hyprpaper ~amd64
+gui-apps/nwg-dock-hyprland ~amd64
+gui-apps/rofi-wayland ~amd64
+gui-apps/wf-recorder ~amd64
+
+# gui-libs
+gui-libs/xdg-desktop-portal-hyprland ~amd64
+
+# net-im
+net-im/whatsapp-desktop-bin
+
+# sys-apps
+sys-apps/flatpak ~amd64
+
+# sys-libs
+sys-libs/libudev-compat
+
+# x11-apps
+x11-apps/xcur2png ~amd64
+
+# x11-base
+x11-base/xwayland
+
+# x11-drivers
+x11-drivers/nvidia-drivers **
+
+*/*::nix-guix
+*/*::steam-overlay

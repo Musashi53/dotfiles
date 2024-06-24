@@ -1,0 +1,3 @@
+media-sound/pulseaudio-daemon
+media-plugins/alsa-plugins
+>=media-video/pipewire-1.0.6
